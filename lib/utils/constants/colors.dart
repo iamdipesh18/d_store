@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class TColors{
+class TColors {
   TColors._();
 
   // App Basic Colors
@@ -10,11 +10,10 @@ class TColors{
 
   // App Gradient Colors
   static const Gradient linearGradient = LinearGradient(
+    begin: Alignment(0, 0),
+    end: Alignment(0.707, -0.707),
     colors: [Color(0xFFff9a9e), Color(0xFFfad0c4), Color(0xFFfad0c4)],
-    begin: Alignment(0,0),
-    end: Alignment(0.707,-0.707),
   );
-
 
   // App Text Colors
   static const Color textPrimary = Color(0xFF333333);
@@ -36,7 +35,7 @@ class TColors{
   static const Color buttonDisabled = Color(0xFFC4C4C4);
 
   // App Border Colors
-  static const Color borderPrimary = Color(0xFFD9D9D9); 
+  static const Color borderPrimary = Color(0xFFD9D9D9);
   static const Color borderSecondary = Color(0xFFE6E6E6);
 
   // App Error Colors
@@ -53,8 +52,4 @@ class TColors{
   static const Color lightGrey = Color(0xFFf9f9f9);
   static const Color white = Color(0xFFffffff);
   static const Color softgrey = Color(0xFFf4f4f4);
-
-
-
-
 }
