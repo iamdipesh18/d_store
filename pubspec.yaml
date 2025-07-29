@@ -18,6 +18,7 @@ dependencies:
   intl: ^0.18.1
   http: ^1.1.0
   flutter_native_splash: ^2.4.6
+  smooth_page_indicator: ^1.2.1
 
 # ICONS 
   iconsax: ^0.0.8
@@ -46,6 +47,7 @@ flutter:
   assets:
     - assets/logos/
     - assets/images/
+    - assets/images/on_boarding_images/
     - assets/icons/
     - assets/icons/brands/
     - assets/fonts/
