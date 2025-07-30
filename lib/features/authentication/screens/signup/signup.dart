@@ -1,5 +1,5 @@
-import 'package:d_store/common/widgets.login_singup/form_divider.dart';
-import 'package:d_store/common/widgets.login_singup/social_buttons.dart';
+import 'package:d_store/common/widgets/login_signup/form_divider.dart';
+import 'package:d_store/common/widgets/login_signup/social_buttons.dart';
 import 'package:d_store/features/authentication/screens/signup/widgets/signup_form.dart';
 import 'package:d_store/utils/constants/sizes.dart';
 import 'package:d_store/utils/constants/text_strings.dart';
@@ -25,15 +25,17 @@ class SignUpScreen extends StatelessWidget {
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
               const SizedBox(height: TSizes.spaceBtwSections),
+
               // Form
               TSignupForm(),
               const SizedBox(height: TSizes.spaceBtwSections),
+
               // Divider
               TFormDivider(dividerText: TText.orSignUpWith.capitalize!),
               const SizedBox(height: TSizes.spaceBtwSections),
+
               // Social Buttons
               const TSocialButtons(),
-              const SizedBox(height: TSizes.spaceBtwSections),
             ],
           ),
         ),

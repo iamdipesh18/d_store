@@ -58,21 +58,22 @@ class TText {
       "Don't worry sometimes people can forget too, enter your email and";
 
   static const String changeYourPasswordTitle = "Password Reset Email Sent";
-    static const String changeYourPasswordSubtitle = "Your Account Security is our Priority!, We have sent you a secured link to Safely";
+  static const String changeYourPasswordSubtitle =
+      "Your Account Security is our Priority!, We have sent you a secured link to Safely";
 
   static const String confirmEmail = "Verify your email address!";
   static const String confirmEmailSubtitle =
-      "Congratulations! Your Account Awaits: Verify Your Email to start shopping";
+      "Congratulations! Your Account Awaits: Verify Your Email to start shopping and experience a world of unrivaled deals and personalized offers";
 
-  static const String emailNotReceivedMessage = "Didn't get the mail? Check your junk / span or resend it";
-
+  static const String emailNotReceivedMessage =
+      "Didn't get the mail? Check your junk / span or resend it";
 
   static const String yourAccountCreatedTitle =
       "Your account successfully created!";
   static const String yourAccountCreatedSubtitle =
       "Welcome to Your Ultimate Shopping Destinations: Your Account is Created, Unleash";
 
-    static const String and =
-      "and";
+  static const String and = "and";
 
+  static const String tContinue = "Continue";
 }

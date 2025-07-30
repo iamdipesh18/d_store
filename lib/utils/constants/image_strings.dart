@@ -18,4 +18,18 @@ class TImage {
       'assets/images/on_boarding_images/searching.gif';
   static const String onBoarding3 =
       'assets/images/on_boarding_images/delivery.gif';
+
+  // -- Animations
+  static const String productsIllustration =
+      'assets/images/animations/workout.png';
+  static const String producrsSaleIllustration =
+      'assets/images/animations/sale.png';
+  static const String staticSuccessIllustration =
+      'assets/images/animations/success.png';
+  static const String deliveredInPlaneIllustration =
+      'assets/images/animations/come_back_later.png';
+  static const String deliveredEmailIllustration =
+      'assets/images/animations/man_received_a_mail.png';
+  static const String verifyIllustration =
+      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
 }
