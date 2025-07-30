@@ -9,16 +9,16 @@ class TCheckboxTheme {
         4,
       ), // Rounded corners for the checkbox
     ),
-    checkColor: MaterialStateProperty.resolveWith((states){
-      if (states.contains(MaterialState.selected)) {
+    checkColor: WidgetStateProperty.resolveWith((states){
+      if (states.contains(WidgetState.selected)) {
         return Colors.white; // Color for the checkmark
       }
       else {
         return Colors.black; // Default color when not selected
       }
     }), // Color for the checkmark
-    fillColor: MaterialStateProperty.resolveWith((states){
-      if (states.contains(MaterialState.selected)) {
+    fillColor: WidgetStateProperty.resolveWith((states){
+      if (states.contains(WidgetState.selected)) {
         return Colors.blue; // Color for the checkmark
       }
       else {
@@ -33,16 +33,16 @@ class TCheckboxTheme {
         4,
       ), // Rounded corners for the checkbox
     ),
-    checkColor: MaterialStateProperty.resolveWith((states){
-      if (states.contains(MaterialState.selected)) {
+    checkColor: WidgetStateProperty.resolveWith((states){
+      if (states.contains(WidgetState.selected)) {
         return Colors.white; // Color for the checkmark
       }
       else {
         return Colors.black; // Default color when not selected
       }
     }), // Color for the checkmark
-    fillColor: MaterialStateProperty.resolveWith((states){
-      if (states.contains(MaterialState.selected)) {
+    fillColor: WidgetStateProperty.resolveWith((states){
+      if (states.contains(WidgetState.selected)) {
         return Colors.blue; // Color for the checkmark
       }
       else {
