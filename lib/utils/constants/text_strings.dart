@@ -72,4 +72,7 @@ class TText {
   static const String yourAccountCreatedSubtitle =
       "Welcome to Your Ultimate Shopping Destinations: Your Account is Created, Unleash";
 
+    static const String and =
+      "and";
+
 }
