@@ -1,4 +1,5 @@
 import 'package:d_store/features/authentication/screens/onboarding/onboarding.dart';
+import 'package:d_store/navigation_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:d_store/utils/theme/theme.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -13,7 +14,8 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system, // Use system theme mode
       theme: TAppTheme.lightTheme, // for light theme
       darkTheme: TAppTheme.darkTheme, // for dark theme
-      home: const OnBoardingScreen(), // Initial screen
+      // home: const OnBoardingScreen(), // Initial screen
+      home: const NavigationMenu(),
       debugShowCheckedModeBanner: false, // Hide debug banner
     );
   }
