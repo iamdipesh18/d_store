@@ -55,7 +55,7 @@ class TText {
 
   static const String forgetPasswordTitle = "Forget password";
   static const String forgetPasswordSubtitle =
-      "Don't worry sometimes people can forget too, enter your email and";
+      "Don't worry sometimes people can forget too, enter your email and we will send you a password reset link.";
 
   static const String changeYourPasswordTitle = "Password Reset Email Sent";
   static const String changeYourPasswordSubtitle =
@@ -76,4 +76,6 @@ class TText {
   static const String and = "and";
 
   static const String tContinue = "Continue";
+  static const String submit = "Submit";
+  static const String done = "Done";
 }
