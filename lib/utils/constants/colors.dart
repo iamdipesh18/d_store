@@ -23,11 +23,13 @@ class TColors {
   // App Background Colors
   static const Color light = Color(0xFFF6F6F6);
   static const Color dark = Color(0xFF272727);
-  static const Color backgroundPrimary = Color(0xFFF3F5FF);
+  static const Color primaryBackground = Color(0xFFF3F5FF);
 
   // App Background Container Colors
-  static const Color containerLight = Color(0xFFF6F6F6);
-  static const Color containerDark = Color(0xFF1E1E1E);
+  static const Color lightContainer = Color(0xFFF6F6F6);
+  // static const Color darkContainer = Color(0xFF1E1E1E);
+  // ignore: deprecated_member_use
+  static Color darkContainer = TColors.white.withOpacity(0.1);
 
   // App Button Colors
   static const Color buttonPrimary = Color(0xFF4b68ff);
@@ -52,5 +54,4 @@ class TColors {
   static const Color lightGrey = Color(0xFFf9f9f9);
   static const Color white = Color(0xFFffffff);
   static const Color softgrey = Color(0xFFf4f4f4);
-
 }
