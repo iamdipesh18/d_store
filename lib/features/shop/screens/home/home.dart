@@ -1,13 +1,20 @@
 import 'package:d_store/common/widgets/custom_shapes/containers/primary_header_container.dart';
+import 'package:d_store/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:d_store/features/shop/screens/home/widgets/home_appbar.dart';
+import 'package:d_store/utils/constants/colors.dart';
+import 'package:d_store/utils/constants/sizes.dart';
+import 'package:d_store/utils/constants/text_strings.dart';
+import 'package:d_store/utils/device/device_utility.dart';
+import 'package:d_store/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -16,9 +23,12 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   /// -- Appbar
-                  THomeAppBar(),
+                  const THomeAppBar(),
+                  const SizedBox(height: TSizes.spaceBtwSections),
 
                   /// -- Search Bar
+                  const TSearchContainer(text: TText.tSearchInStore,),
+                  const SizedBox(height: TSizes.spaceBtwSections),
 
                   /// -- Categories
                 ],
@@ -30,3 +40,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+

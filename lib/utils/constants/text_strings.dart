@@ -78,4 +78,6 @@ class TText {
   static const String tContinue = "Continue";
   static const String submit = "Submit";
   static const String done = "Done";
+
+  static const String tSearchInStore = "Search in Store";
 }
