@@ -54,10 +54,9 @@ class TImage {
       'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
 
   // Banners
-  static const String promoBanner1 =
-      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
+  static const String promoBanner1 = 'assets/images/banners/PromoBanner1.jpg';
   static const String promoBanner2 =
-      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
+      'assets/images/banners/PromoBanner2.jpg';
   static const String promoBanner3 =
-      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
+      'assets/images/banners/PromoBanner3.jpg';
 }
