@@ -17,8 +17,8 @@ class TText {
       'From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery!';
 
   // -- Home
-  static const String homeAppbarTitle = 'Good day for shopping';
-  static const String homeAppbarSubTitle = 'Dipesh Dhungana';
+  static const String homeAppbarTitle = "Good day for shopping";
+  static const String homeAppbarSubTitle = "Dipesh Dhungana";
 
   // -- Error Messages
 

@@ -38,36 +38,36 @@ class TDeviceUtils {
     return MediaQuery.of(context).size.width;
   }
 
-  static double getScreenHeight(BuildContext context) {
+  static double getScreenHeight() {
     return MediaQuery.of(Get.context!).size.height;
   }
 
-  static double getStatusBarHeight(BuildContext context) {
+  static double getStatusBarHeight() {
     return MediaQuery.of(Get.context!).padding.top;
   }
 
-  static double getBottomNavigationBarHeight(BuildContext context) {
+  static double getBottomNavigationBarHeight() {
     return kBottomNavigationBarHeight;
   }
 
-  static double getAppBarHeight(BuildContext context) {
+  static double getAppBarHeight() {
     return kToolbarHeight;
   }
 
-  static double getNavigationBarHeight(BuildContext context) {
+  static double getNavigationBarHeight() {
     return kBottomNavigationBarHeight;
   }
 
-  static double getPixelRatio(BuildContext context) {
+  static double getPixelRatio() {
     return MediaQuery.of(Get.context!).devicePixelRatio;
   }
 
-  static double getKeyboardHeight(BuildContext context) {
+  static double getKeyboardHeight() {
     final viewInsets = MediaQuery.of(Get.context!).viewInsets;
     return viewInsets.bottom;
   }
 
-  static Future<bool> isKeyboardVisible(BuildContext context) async {
+  static Future<bool> isKeyboardVisible() async {
     final viewInsets = MediaQuery.of(Get.context!).viewInsets;
     return viewInsets.bottom > 0;
   }
@@ -89,14 +89,16 @@ class TDeviceUtils {
   static void vibrate(Duration duration) {
     if (Platform.isAndroid || Platform.isIOS) {
       HapticFeedback.vibrate();
-      Future.delayed(duration, ()=>HapticFeedback.vibrate() );
+      Future.delayed(duration, () => HapticFeedback.vibrate());
     } else {
       // For other platforms, you can implement custom vibration logic if needed
       //print('Vibration not supported on this platform');
     }
   }
 
-  static Future<void> setPreferredOrientations(List<DeviceOrientation> orientations) async {
+  static Future<void> setPreferredOrientations(
+    List<DeviceOrientation> orientations,
+  ) async {
     await SystemChrome.setPreferredOrientations(orientations);
   }
 

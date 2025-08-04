@@ -14,7 +14,7 @@ class OnBoardingDotNavigation extends StatelessWidget {
     final controller = OnBoardingController.instance;
     final dark = THelperFunctions.isDarkMode(context);
     return Positioned(
-      bottom: TDeviceUtils.getBottomNavigationBarHeight(context) + 25,
+      bottom: TDeviceUtils.getBottomNavigationBarHeight() + 25,
       left: TSizes.defaultSpace,
       child: SmoothPageIndicator(
         controller: controller.pageController, // Controller for the PageView
