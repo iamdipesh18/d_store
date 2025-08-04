@@ -55,8 +55,12 @@ class TImage {
 
   // Banners
   static const String promoBanner1 = 'assets/images/banners/PromoBanner1.jpg';
-  static const String promoBanner2 =
-      'assets/images/banners/PromoBanner2.jpg';
-  static const String promoBanner3 =
-      'assets/images/banners/PromoBanner3.jpg';
+  static const String promoBanner2 = 'assets/images/banners/PromoBanner2.jpg';
+  static const String promoBanner3 = 'assets/images/banners/PromoBanner3.jpg';
+
+  /// -- Products
+  static const String productImage1 = 'assets/images/products/Airforce1.png';
+  static const String productImage2 =
+      'assets/images/products/Nike AirForce 1 Low White Metallic Silver.jpeg';
+  static const String productImage3 = 'assets/images/banners/PromoBanner3.jpg';
 }
