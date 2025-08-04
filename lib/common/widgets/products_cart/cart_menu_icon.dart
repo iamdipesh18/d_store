@@ -18,10 +18,10 @@ class TCartCounterIcon extends StatelessWidget {
       children: [
         IconButton(
           onPressed: () {},
-          icon: Icon(Iconsax.shopping_bag, color: iconColor),
+          icon: Icon(Iconsax.shopping_bag, color: iconColor, size: 30,),
         ),
         Positioned(
-          right: 0,
+          right: 4,
           child: Container(
             width: 18,
             height: 18,
