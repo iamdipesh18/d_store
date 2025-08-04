@@ -32,4 +32,32 @@ class TImage {
       'assets/images/animations/man_received_a_mail.png';
   static const String verifyIllustration =
       'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
+
+  // -- Category Icons
+  static const String sportIcon =
+      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
+  static const String clothIcon =
+      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
+  static const String shoeIcon =
+      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
+  static const String cosmeticIcon =
+      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
+  static const String animalIcon =
+      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
+  static const String toyIcon =
+      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
+  static const String furnitureIcon =
+      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
+  static const String jwelleryIcon =
+      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
+  static const String electronicsIcon =
+      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
+
+  // Banners
+  static const String promoBanner1 =
+      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
+  static const String promoBanner2 =
+      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
+  static const String promoBanner3 =
+      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
 }
