@@ -4,7 +4,9 @@ import 'package:d_store/common/widgets/icons/t_circular_icon.dart';
 import 'package:d_store/common/widgets/images/t_rounded_image.dart';
 import 'package:d_store/common/widgets/texts/product_price_text.dart';
 import 'package:d_store/common/widgets/texts/product_title_text.dart';
+import 'package:d_store/common/widgets/texts/t_brand_title_text_with_verified_icon.dart';
 import 'package:d_store/utils/constants/colors.dart';
+import 'package:d_store/utils/constants/enums.dart';
 import 'package:d_store/utils/constants/image_strings.dart';
 import 'package:d_store/utils/constants/sizes.dart';
 import 'package:d_store/utils/helpers/helper_functions.dart';
@@ -20,7 +22,6 @@ class TProductCardVertical extends StatelessWidget {
 
     return GestureDetector(
       onTap: () {
-        // TODO: Handle Product Card
         debugPrint("Product Card Pressed");
       },
       child: Container(
@@ -59,28 +60,25 @@ class TProductCardVertical extends StatelessWidget {
                         horizontal: TSizes.sm,
                         vertical: TSizes.xs,
                       ),
-                      child: FittedBox(
-                        child: Text(
-                          '25%',
-                          style: Theme.of(
-                            context,
-                          ).textTheme.labelLarge!.apply(color: TColors.black),
-                        ),
+                      child: Text(
+                        '25%',
+                        style: Theme.of(
+                          context,
+                        ).textTheme.labelLarge!.apply(color: TColors.black),
                       ),
                     ),
                   ),
 
                   /// -- Wishlist Button (Top-right) / Favourite Icon Button
-                  Positioned(
+                  const Positioned(
                     top: 0,
                     right: 0,
                     child: TCircularIcon(
                       icon: Iconsax.heart5,
                       color: Colors.red,
-                      onPressed: () {
-                        // TODO: Handle wishlist toggle
-                        debugPrint("Wishlist icon pressed");
-                      },
+                      // onPressed: () {
+                      //   debugPrint("Wishlist icon pressed");
+                      // },
                     ),
                   ),
                 ],
@@ -90,42 +88,34 @@ class TProductCardVertical extends StatelessWidget {
 
             /// -- Details
             /// -- Product Title
-            Padding(
-              padding: const EdgeInsets.only(left: TSizes.sm),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TProductTitleText(title: 'Nike Airforce 1', smallSize: true),
-                  const SizedBox(height: TSizes.spaceBtwItems / 2),
-                  Row(
-                    children: [
-                      Text(
-                        'Nike',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(width: TSizes.iconXs),
-                      Icon(
-                        Iconsax.verify5,
-                        color: TColors.primary,
-                        size: TSizes.iconMd,
-                      ),
-                    ],
-                  ),
-                ],
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: TSizes.sm),
+
+              child: SizedBox(
+                width: double.infinity,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    TProductTitleText(
+                      title: 'Nike Airforce 1',
+                      smallSize: true,
+                    ),
+                    SizedBox(height: TSizes.spaceBtwItems / 2),
+                    TBrandTitleWithVerifiedIcon(title: 'Nike'),
+                  ],
+                ),
               ),
             ),
             // adding spacer here to keep the height of each box same in case 1 or 2 lines of heading
-            Spacer(),
-
+            const Spacer(),
+            //  Price Row
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 // Price
-                Padding(
-                  padding: const EdgeInsets.only(left: TSizes.sm),
-                  child: const TProductPriceText(price: '35'),
+                const Padding(
+                  padding:  EdgeInsets.only(left: TSizes.sm),
+                  child:  TProductPriceText(price: '35.0'),
                 ),
 
                 /// -- Add to Cart Button

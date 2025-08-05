@@ -1,0 +1,52 @@
+import 'package:d_store/utils/constants/colors.dart';
+import 'package:d_store/utils/constants/image_strings.dart';
+import 'package:d_store/utils/constants/sizes.dart';
+import 'package:d_store/utils/helpers/helper_functions.dart';
+import 'package:flutter/material.dart';
+
+class TCircularImage extends StatelessWidget {
+  const TCircularImage({
+    super.key,
+    required this.image,
+    this.fit = BoxFit.cover,
+    this.isNetworkImage = false,
+    this.overlayColor,
+    this.backgroundColor,
+    this.width = 56,
+    this.height = 56,
+    this.padding = TSizes.sm,
+  });
+
+  final String image;
+  final BoxFit fit;
+  final bool isNetworkImage;
+  final Color? overlayColor;
+  final Color? backgroundColor;
+  final double width;
+  final double height;
+  final double padding;
+
+  @override
+  Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
+    return Container(
+      width: width,
+      height: height,
+      padding: EdgeInsets.all(padding),
+      decoration: BoxDecoration(
+        /// -- If Image  Background Color is Null then Switch to Light and DarkMode Color Design
+        color: backgroundColor ?? (dark ? TColors.black : TColors.white),
+        borderRadius: BorderRadius.circular(100),
+      ),
+      child: Center(
+        child: Image(
+          fit: fit,
+          image: isNetworkImage
+              ? NetworkImage(image) as ImageProvider
+              : AssetImage(TImage.clothIcon) as ImageProvider,
+          color: overlayColor,
+        ),
+      ),
+    );
+  }
+}

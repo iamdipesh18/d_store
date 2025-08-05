@@ -1,4 +1,5 @@
 import 'package:d_store/features/shop/screens/home/home.dart';
+import 'package:d_store/features/shop/screens/wishlist/wishlist.dart';
 import 'package:d_store/features/shop/store/store.dart';
 import 'package:d_store/utils/constants/colors.dart';
 import 'package:d_store/utils/helpers/helper_functions.dart';
@@ -21,8 +22,10 @@ class NavigationMenu extends StatelessWidget {
           selectedIndex: controller.selectedIndex.value,
           onDestinationSelected: (index) =>
               controller.selectedIndex.value = index,
-          backgroundColor: darkMode? TColors.black :Colors.white,
-          indicatorColor: darkMode? TColors.white.withOpacity(0.1):TColors.black.withOpacity(0.1),
+          backgroundColor: darkMode ? TColors.black : Colors.white,
+          indicatorColor: darkMode
+              ? TColors.white.withOpacity(0.1)
+              : TColors.black.withOpacity(0.1),
           destinations: [
             NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
             NavigationDestination(icon: Icon(Iconsax.shop), label: 'Store'),
@@ -37,12 +40,12 @@ class NavigationMenu extends StatelessWidget {
 }
 
 class NavigationController extends GetxController {
-  final Rx<int> selectedIndex = 1.obs;
+  final Rx<int> selectedIndex = 3.obs;
 
   final screens = [
     const HomeScreen(),
     const StoreScreen(),
-    Container(color: Colors.orange),
+    const FavouriteScreen(),
     Container(color: Colors.blue),
   ];
 }

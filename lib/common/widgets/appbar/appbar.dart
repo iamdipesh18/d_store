@@ -25,11 +25,7 @@ class TAppbar extends StatelessWidget implements PreferredSizeWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: TSizes.md),
       child: AppBar(
-        // ✅ FIX: Removed the outer Padding widget
-        // AppBar should not be wrapped in Padding; it breaks layout and can hide title widgets
-      
         automaticallyImplyLeading: false, // Prevent default back button
-      
         // Leading icon logic
         leading: showBackArrow
             ? IconButton(

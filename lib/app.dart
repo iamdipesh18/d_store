@@ -1,4 +1,3 @@
-import 'package:d_store/features/shop/store/store.dart';
 import 'package:d_store/navigation_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:d_store/utils/theme/theme.dart';

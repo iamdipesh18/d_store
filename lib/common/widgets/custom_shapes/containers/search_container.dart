@@ -11,13 +11,16 @@ class TSearchContainer extends StatelessWidget {
     required this.text,
     this.icon = Iconsax.search_normal,
     this.showBackground = true,
-    this.showBorder = true, this.onTap,
+    this.showBorder = true,
+    this.onTap,
+    this.padding = const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
   });
 
   final String text;
   final IconData? icon;
   final bool showBackground, showBorder;
   final VoidCallback? onTap;
+  final EdgeInsetsGeometry padding;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +45,10 @@ class TSearchContainer extends StatelessWidget {
           ),
           child: Row(
             children: [
-              const Icon(Iconsax.search_normal, color: TColors.darkerGrey),
+              Icon(
+                Iconsax.search_normal,
+                color: dark ? TColors.darkerGrey : TColors.grey,
+              ),
               const SizedBox(width: TSizes.spaceBtwItems),
               Text(text, style: Theme.of(context).textTheme.bodySmall),
             ],

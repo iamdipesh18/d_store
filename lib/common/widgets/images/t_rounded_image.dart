@@ -35,10 +35,11 @@ class TRoundedImage extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        width: width?? double.infinity,
-        height: height ?? double.infinity,
+        width: width,
+        height: height ,
         padding: padding,
         decoration: BoxDecoration(
+          color: backgroundColor,
           borderRadius: BorderRadius.circular(borderRadius!),
         ),
         child: ClipRRect(
@@ -47,7 +48,7 @@ class TRoundedImage extends StatelessWidget {
               : BorderRadius.zero,
           child: Image(
             image: isNetworkImage
-                ? NetworkImage(imageUrl)
+                ? NetworkImage(imageUrl) as ImageProvider
                 : AssetImage(imageUrl) as ImageProvider,
             fit: fit,
           ),

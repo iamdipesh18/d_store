@@ -54,5 +54,4 @@ class TImage {
   static const String productImage1 = 'assets/images/products/Airforce1.png';
   static const String productImage2 =
       'assets/images/products/Nike AirForce 1 Low White Metallic Silver.jpeg';
-  static const String productImage3 = 'assets/images/banners/PromoBanner3.jpg';
 }

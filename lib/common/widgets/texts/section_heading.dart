@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class TSectionHeading extends StatelessWidget {
   const TSectionHeading({
     super.key,
@@ -21,9 +20,8 @@ class TSectionHeading extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        
         Text(
-          'Popular Categories',
+          title,
           style: Theme.of(
             context,
           ).textTheme.headlineSmall!.apply(color: textColor),
