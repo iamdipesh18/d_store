@@ -1,3 +1,4 @@
+import 'package:d_store/features/shop/store/store.dart';
 import 'package:d_store/navigation_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:d_store/utils/theme/theme.dart';
@@ -16,6 +17,7 @@ class App extends StatelessWidget {
       // home: const OnBoardingScreen(), // Initial screen
       home: const NavigationMenu(),
       // home: const HomeScreen(),
+      // home: const StoreScreen(),
       debugShowCheckedModeBanner: false, // Hide debug banner
     );
   }

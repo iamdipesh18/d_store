@@ -34,24 +34,16 @@ class TImage {
       'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
 
   // -- Category Icons
-  static const String sportIcon =
-      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
-  static const String clothIcon =
-      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
-  static const String shoeIcon =
-      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
-  static const String cosmeticIcon =
-      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
-  static const String animalIcon =
-      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
-  static const String toyIcon =
-      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
-  static const String furnitureIcon =
-      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
-  static const String jwelleryIcon =
-      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
+  static const String sportIcon = 'assets/icons/categories/Sports.png';
+  static const String clothIcon = 'assets/icons/categories/clothes.png';
+  static const String shoeIcon = 'assets/icons/categories/Shoe.png';
+  static const String cosmeticIcon = 'assets/icons/categories/Cosmetics.png';
+  static const String animalIcon = 'assets/icons/categories/Animal.png';
+  static const String toyIcon = 'assets/icons/categories/Toys.png';
+  static const String furnitureIcon = 'assets/icons/categories/Furniture.png';
+  static const String jwelleryIcon = 'assets/icons/categories/Jwellery.png';
   static const String electronicsIcon =
-      'assets/images/animations/travel_backpack_with_passport_and_air_ticket.png';
+      'assets/icons/categories/Electronics.png';
 
   // Banners
   static const String promoBanner1 = 'assets/images/banners/PromoBanner1.jpg';

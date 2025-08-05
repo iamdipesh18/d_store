@@ -38,7 +38,7 @@ class TProductCardVertical extends StatelessWidget {
             /// -- Thumbnail Section with Image, Tag, Wishlist Button
             TRoundedContainer(
               height: 180,
-              padding: const EdgeInsets.all(TSizes.md),
+              padding: const EdgeInsets.all(TSizes.sm),
               backgroundColor: dark ? TColors.dark : TColors.light,
               child: Stack(
                 children: [
@@ -51,7 +51,7 @@ class TProductCardVertical extends StatelessWidget {
                   /// -- Discount/ Sale Tag (Top-left)
                   Positioned(
                     top: 12,
-                    left: 12,
+                    // left: 12,
                     child: TRoundedContainer(
                       radius: TSizes.sm,
                       backgroundColor: TColors.secondary.withOpacity(0.8),
@@ -86,7 +86,7 @@ class TProductCardVertical extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: TSizes.spaceBtwItems),
+            const SizedBox(height: TSizes.spaceBtwItems / 2),
 
             /// -- Details
             /// -- Product Title
@@ -105,44 +105,47 @@ class TProductCardVertical extends StatelessWidget {
                         maxLines: 1,
                         style: Theme.of(context).textTheme.labelMedium,
                       ),
-                      const SizedBox(width: TSizes.xs),
+                      const SizedBox(width: TSizes.iconXs),
                       Icon(
                         Iconsax.verify5,
                         color: TColors.primary,
-                        size: TSizes.iconXs,
-                      ),
-                    ],
-                  ),
-                  //Spacer(),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      // Price
-                      const TProductPriceText(price: '35'),
-
-                      /// -- Add to Cart Button
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: TColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(TSizes.cardRadiusMd),
-                            bottomRight: Radius.circular(
-                              TSizes.productImageRadius,
-                            ),
-                          ),
-                        ),
-                        child: const SizedBox(
-                          width: TSizes.iconLg * 1.2,
-                          height: TSizes.iconLg * 1.2,
-                          child: Center(
-                            child: Icon(Iconsax.add, color: TColors.white),
-                          ),
-                        ),
+                        size: TSizes.iconMd,
                       ),
                     ],
                   ),
                 ],
               ),
+            ),
+            // adding spacer here to keep the height of each box same in case 1 or 2 lines of heading
+            Spacer(),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // Price
+                Padding(
+                  padding: const EdgeInsets.only(left: TSizes.sm),
+                  child: const TProductPriceText(price: '35'),
+                ),
+
+                /// -- Add to Cart Button
+                Container(
+                  decoration: const BoxDecoration(
+                    color: TColors.dark,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(TSizes.cardRadiusMd),
+                      bottomRight: Radius.circular(TSizes.productImageRadius),
+                    ),
+                  ),
+                  child: const SizedBox(
+                    width: TSizes.iconLg * 1.2,
+                    height: TSizes.iconLg * 1.2,
+                    child: Center(
+                      child: Icon(Iconsax.add, color: TColors.white),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
