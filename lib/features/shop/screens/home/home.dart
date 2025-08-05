@@ -21,20 +21,20 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             /// -- Header
-            TPrimaryHeaderContainer(
+            const TPrimaryHeaderContainer(
               child: Column(
                 children: [
                   /// -- Appbar
-                  const THomeAppBar(),
-                  const SizedBox(height: TSizes.spaceBtwSections),
+                  THomeAppBar(),
+                  SizedBox(height: TSizes.spaceBtwSections),
 
                   /// -- Search Bar
-                  const TSearchContainer(text: TText.tSearchInStore),
-                  const SizedBox(height: TSizes.spaceBtwSections),
+                  TSearchContainer(text: TText.tSearchInStore),
+                  SizedBox(height: TSizes.spaceBtwSections),
 
                   /// -- Categories
                   Padding(
-                    padding: EdgeInsetsGeometry.only(left: TSizes.defaultSpace),
+                    padding: EdgeInsets.only(left: TSizes.defaultSpace),
                     child: Column(
                       children: [
                         /// --- Headings
@@ -43,13 +43,14 @@ class HomeScreen extends StatelessWidget {
                           showActionButton: false,
                           textColor: Colors.white,
                         ),
-                        const SizedBox(height: TSizes.spaceBtwItems),
+                        SizedBox(height: TSizes.spaceBtwItems),
 
                         /// --- Categories
-                        const THomeCategories(),
+                        THomeCategories(),
                       ],
                     ),
                   ),
+                  SizedBox(height: TSizes.spaceBtwSections),
                 ],
               ),
             ),
@@ -73,7 +74,9 @@ class HomeScreen extends StatelessWidget {
                   TSectionHeading(
                     title: "Popular Products",
                     onPressed: () {
-                      debugPrint('View All Button Pressed in Popular Categories');
+                      debugPrint(
+                        'View All Button Pressed in Popular Categories',
+                      );
                     },
                   ),
                   const SizedBox(height: TSizes.spaceBtwItems),

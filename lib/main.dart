@@ -9,7 +9,7 @@ void main() {
   // Todo: Initialize Firebase
   // Todo: Initialize Authentication
 
-
+  // Load all the Material Designs / themes / Localizations / Bindings
   runApp(const App());
 
 }

@@ -17,6 +17,7 @@ class FavouriteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDark = THelperFunctions.isDarkMode(context);
     return Scaffold(
+      /// -- Custom App Bar
       appBar: TAppbar(
         title: Text(
           "Wishlist",
@@ -33,16 +34,16 @@ class FavouriteScreen extends StatelessWidget {
           ),
         ],
       ),
+
+      /// -- Body
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
-          child: Column(
-            children: [
-              TGridLayout(
-                itemCount: 6,
-                itembuilder: (_, index) => const TProductCardVertical(),
-              ),
-            ],
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
+
+          /// -- Products Grid
+          child: TGridLayout(
+            itemCount: 6,
+            itembuilder: (_, index) => const TProductCardVertical(),
           ),
         ),
       ),

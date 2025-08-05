@@ -5,7 +5,7 @@ import 'package:d_store/common/widgets/layouts/grid_layout.dart';
 import 'package:d_store/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:d_store/common/widgets/brands/brand_card.dart';
 import 'package:d_store/common/widgets/texts/section_heading.dart';
-import 'package:d_store/features/shop/store/widgets/category_tab.dart';
+import 'package:d_store/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:d_store/utils/constants/colors.dart';
 import 'package:d_store/utils/constants/sizes.dart';
 import 'package:d_store/utils/constants/text_strings.dart';
@@ -48,7 +48,7 @@ class StoreScreen extends StatelessWidget {
                     physics: const NeverScrollableScrollPhysics(),
                     children: [
                       /// -- Search Bar
-                      SizedBox(height: TSizes.spaceBtwItems),
+                      const SizedBox(height: TSizes.spaceBtwItems),
                       const TSearchContainer(
                         text: TText.tSearchInStore,
                         showBorder: true,
@@ -73,7 +73,7 @@ class StoreScreen extends StatelessWidget {
                         mainAxisExtent: 80,
                         itembuilder: (_, index) {
                           /// -- We will pass each brand and On pressed events also
-                          return const TBrandCard(showBorder: false);
+                          return const TBrandCard(showBorder: true);
                         },
                       ),
                     ],
