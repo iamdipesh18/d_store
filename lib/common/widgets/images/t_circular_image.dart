@@ -1,5 +1,4 @@
 import 'package:d_store/utils/constants/colors.dart';
-import 'package:d_store/utils/constants/image_strings.dart';
 import 'package:d_store/utils/constants/sizes.dart';
 import 'package:d_store/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +17,7 @@ class TCircularImage extends StatelessWidget {
   });
 
   final String image;
-  final BoxFit fit;
+  final BoxFit? fit;
   final bool isNetworkImage;
   final Color? overlayColor;
   final Color? backgroundColor;
@@ -43,7 +42,7 @@ class TCircularImage extends StatelessWidget {
           fit: fit,
           image: isNetworkImage
               ? NetworkImage(image) as ImageProvider
-              : AssetImage(TImage.clothIcon) as ImageProvider,
+              : AssetImage(image) as ImageProvider,
           color: overlayColor,
         ),
       ),

@@ -1,3 +1,4 @@
+import 'package:d_store/features/personalization/screens/profile/profile.dart';
 import 'package:d_store/navigation_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:d_store/utils/theme/theme.dart';
@@ -14,9 +15,10 @@ class App extends StatelessWidget {
       theme: TAppTheme.lightTheme, // for light theme
       darkTheme: TAppTheme.darkTheme, // for dark theme/
       // home: const OnBoardingScreen(), // Initial screen
-      home: const NavigationMenu(),
+      // home: const NavigationMenu(),
       // home: const HomeScreen(),
       // home: const StoreScreen(),
+      home: const ProfileScreen(),
       debugShowCheckedModeBanner: false, // Hide debug banner
     );
   }
