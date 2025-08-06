@@ -34,7 +34,7 @@ class TRoundedContainer extends StatelessWidget {
       height: height,
       margin: margin,
       decoration: BoxDecoration(
-       // color: backgroundColor, // ✅ Correct way to apply background color
+        color: backgroundColor,
         borderRadius: BorderRadius.circular(radius!),
         border: showBorder ? Border.all(color: borderColor) : null,
       ),

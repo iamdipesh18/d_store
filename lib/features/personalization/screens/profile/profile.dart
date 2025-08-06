@@ -2,10 +2,9 @@ import 'package:d_store/common/widgets/appbar/appbar.dart';
 import 'package:d_store/common/widgets/images/t_circular_image.dart';
 import 'package:d_store/common/widgets/texts/section_heading.dart';
 import 'package:d_store/features/personalization/screens/profile/widgets/profile_menu.dart';
-import 'package:d_store/utils/constants/colors.dart';
 import 'package:d_store/utils/constants/image_strings.dart';
 import 'package:d_store/utils/constants/sizes.dart';
-import 'package:d_store/utils/helpers/helper_functions.dart';
+
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -14,7 +13,6 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = THelperFunctions.isDarkMode(context);
     return Scaffold(
       /// -- Appbar
       appBar: TAppbar(showBackArrow: true, title: Text("Profile"),),

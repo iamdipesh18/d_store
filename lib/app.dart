@@ -1,5 +1,5 @@
 import 'package:d_store/features/personalization/screens/profile/profile.dart';
-import 'package:d_store/navigation_menu.dart';
+import 'package:d_store/features/shop/screens/product_details/product_details.dart';
 import 'package:flutter/material.dart';
 import 'package:d_store/utils/theme/theme.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -18,7 +18,8 @@ class App extends StatelessWidget {
       // home: const NavigationMenu(),
       // home: const HomeScreen(),
       // home: const StoreScreen(),
-      home: const ProfileScreen(),
+      // home: const ProfileScreen(),
+      home: const ProductDetailScreen(),
       debugShowCheckedModeBanner: false, // Hide debug banner
     );
   }

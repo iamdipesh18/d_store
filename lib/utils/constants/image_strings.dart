@@ -53,8 +53,10 @@ class TImage {
   /// -- Products
   static const String productImage1 = 'assets/images/products/Airforce1.png';
   static const String productImage2 =
-      'assets/images/products/Nike AirForce 1 Low White Metallic Silver.jpeg';
+      'assets/images/products/Airforce1.png';
 
   /// -- User Image
   static const String user = 'assets/images/user/user.png';
+
+  /// -- Nike AF1s
 }

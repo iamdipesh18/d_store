@@ -53,7 +53,8 @@ flutter:
     - assets/images/animations/
     - assets/images/banners/
     - assets/images/products/
-    - assets/images/user/user.png
+    - assets/images/user/
+    - assets/images/NikeAF1/
     - assets/icons/
     - assets/icons/brands/
     - assets/icons/categories/
