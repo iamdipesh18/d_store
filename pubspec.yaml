@@ -36,6 +36,7 @@ dependencies:
 #---------------- PACKAGES END ----------------#
 
   flutter_svg: ^1.1.6
+  flutter_rating_bar: ^4.0.1
   
   
 
