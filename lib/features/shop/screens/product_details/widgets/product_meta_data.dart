@@ -69,7 +69,7 @@ class TProductMetaData extends StatelessWidget {
         /// Brand
         Row(
           children: [
-            TCircularImage(image: TImage.shoeIcon,width: 32,height: 32,overlayColor: darkMode? TColors.white : TColors.black,),
+            TCircularImage(image: TImage.nike,width: 32,height: 32,overlayColor: darkMode? TColors.white : TColors.black,),
            const TBrandTitleWithVerifiedIcon(title: 'Nike',brandTextSize: TextSizes.medium,),
           ],
         ),

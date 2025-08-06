@@ -10,6 +10,7 @@ class TImage {
   static const String facebook = 'assets/logos/facebook_icon.png';
   static const String google = 'assets/logos/google_icon.png';
   static const String apple = 'assets/logos/apple.png';
+  static const String nike = 'assets/logos/Nike.png';
 
   // -- Onboarding Images
   static const String onBoarding1 =

@@ -1,3 +1,4 @@
+import 'package:d_store/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 // Custom elevated button theme for the app
@@ -8,7 +9,7 @@ class TElevatedButtonTheme {
       ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           elevation: 0,
-          backgroundColor: Colors.blue, // Primary color for the button
+          backgroundColor: TColors.buttonPrimary, // Primary color for the button
           foregroundColor: Colors.white, // Text color for the button
           disabledBackgroundColor:
               Colors.grey, // Color when the button is disabled
@@ -35,7 +36,7 @@ class TElevatedButtonTheme {
       ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           elevation: 0,
-          backgroundColor: Colors.blue, // Primary color for the button
+          backgroundColor: TColors.buttonPrimary, // Primary color for the button
           foregroundColor: Colors.white, // Text color for the button
           disabledBackgroundColor:
               Colors.grey, // Color when the button is disabled
