@@ -8,11 +8,13 @@ import 'package:d_store/features/shop/screens/product_details/widgets/product_at
 import 'package:d_store/features/shop/screens/product_details/widgets/product_details_image_slider.dart';
 import 'package:d_store/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:d_store/features/shop/screens/product_details/widgets/ratings_and_share_widget.dart';
+import 'package:d_store/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:d_store/utils/constants/colors.dart';
 import 'package:d_store/utils/constants/image_strings.dart';
 import 'package:d_store/utils/constants/sizes.dart';
 import 'package:d_store/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
@@ -25,7 +27,7 @@ class ProductDetailScreen extends StatelessWidget {
     final isDark = THelperFunctions.isDarkMode(context);
 
     return Scaffold(
-      bottomNavigationBar: TBottomAddToCart() ,
+      bottomNavigationBar: TBottomAddToCart(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -99,6 +101,7 @@ class ProductDetailScreen extends StatelessWidget {
                       IconButton(
                         onPressed: () {
                           debugPrint("Review Pressed");
+                          () => Get.to(() => const ProductReviewsScreen());
                         },
                         icon: Icon(Iconsax.arrow_right_3, size: 18),
                       ),
