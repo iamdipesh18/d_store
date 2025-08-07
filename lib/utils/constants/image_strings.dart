@@ -12,6 +12,10 @@ class TImage {
   static const String apple = 'assets/logos/apple.png';
   static const String nike = 'assets/logos/Nike.png';
 
+  // Payment Logos
+  static const String esewa = 'assets/icons/payment_methods/esewa_icon.png';
+  static const String paypal = 'assets/icons/payment_methods/paypal_icon.png';
+
   // -- Onboarding Images
   static const String onBoarding1 =
       'assets/images/on_boarding_images/shopping.gif';

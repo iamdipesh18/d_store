@@ -63,6 +63,7 @@ flutter:
     - assets/icons/
     - assets/icons/brands/
     - assets/icons/categories/
+    - assets/icons/payment_methods/
     - assets/fonts/
 
 #---------------- LOCAL FONTS ----------------#
