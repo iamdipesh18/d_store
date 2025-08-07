@@ -1,6 +1,10 @@
+import 'package:d_store/features/authentication/screens/onboarding/onboarding.dart';
+import 'package:d_store/features/personalization/screens/address/add_new_address.dart';
+import 'package:d_store/features/personalization/screens/address/address.dart';
 import 'package:d_store/features/personalization/screens/profile/profile.dart';
 import 'package:d_store/features/shop/screens/product_details/product_details.dart';
 import 'package:d_store/features/shop/screens/product_reviews/product_reviews.dart';
+import 'package:d_store/features/shop/screens/store/store.dart';
 import 'package:d_store/navigation_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:d_store/utils/theme/theme.dart';
@@ -22,7 +26,9 @@ class App extends StatelessWidget {
       // home: const StoreScreen(),
       // home: const ProfileScreen(),
       // home: const ProductDetailScreen(),
-      home: const ProductReviewsScreen(),
+      // home: const ProductReviewsScreen(),
+      home: const UserAddressScreen(),
+      //  home: const AddNewAddressScreen(),
       debugShowCheckedModeBanner: false, // Hide debug banner
     );
   }

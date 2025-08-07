@@ -6,6 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
 class TSearchContainer extends StatelessWidget {
+  final String text;
+  final IconData? icon;
+  final bool showBackground, showBorder;
+  final VoidCallback? onTap;
+  final EdgeInsetsGeometry padding;
+  final double? space;
   const TSearchContainer({
     super.key,
     required this.text,
@@ -14,13 +20,8 @@ class TSearchContainer extends StatelessWidget {
     this.showBorder = true,
     this.onTap,
     this.padding = const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
+    this.space,
   });
-
-  final String text;
-  final IconData? icon;
-  final bool showBackground, showBorder;
-  final VoidCallback? onTap;
-  final EdgeInsetsGeometry padding;
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +29,7 @@ class TSearchContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsetsGeometry.symmetric(
-          horizontal: TSizes.defaultSpace,
-        ),
+        padding: EdgeInsetsGeometry.symmetric(horizontal: space!),
         child: Container(
           width: TDeviceUtils.getScreenWidth(context),
           padding: const EdgeInsets.all(TSizes.md),

@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(height: TSizes.spaceBtwSections),
 
                   /// -- Search Bar
-                  TSearchContainer(text: TText.tSearchInStore),
+                  TSearchContainer(text: TText.tSearchInStore,space:TSizes.defaultSpace ,),
                   SizedBox(height: TSizes.spaceBtwSections),
 
                   /// -- Categories

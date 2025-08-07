@@ -54,6 +54,7 @@ class StoreScreen extends StatelessWidget {
                         showBorder: true,
                         showBackground: false,
                         padding: EdgeInsets.zero,
+                        space: 0.0,
                       ),
                       //  const TSearchContainer(text: TText.tSearchInStore),
                       SizedBox(height: TSizes.spaceBtwSections),
@@ -97,11 +98,11 @@ class StoreScreen extends StatelessWidget {
           /// -- Body
           body: const TabBarView(
             children: [
-             TCategoryTab(),
-             TCategoryTab(),
-             TCategoryTab(),
-             TCategoryTab(),
-             TCategoryTab(),
+              TCategoryTab(),
+              TCategoryTab(),
+              TCategoryTab(),
+              TCategoryTab(),
+              TCategoryTab(),
             ],
           ),
         ),

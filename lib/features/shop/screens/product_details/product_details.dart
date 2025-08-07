@@ -96,12 +96,13 @@ class ProductDetailScreen extends StatelessWidget {
                       TSectionHeading(
                         title: 'Reviews(199)',
                         showActionButton: false,
-                        onPressed: () {},
+                        onPressed: () =>
+                            Get.to(() => const ProductReviewsScreen()),
                       ),
                       IconButton(
                         onPressed: () {
                           debugPrint("Review Pressed");
-                          () => Get.to(() => const ProductReviewsScreen());
+                          Get.to(() => const ProductReviewsScreen());
                         },
                         icon: Icon(Iconsax.arrow_right_3, size: 18),
                       ),
