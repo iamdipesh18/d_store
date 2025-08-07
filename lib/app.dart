@@ -1,6 +1,7 @@
 import 'package:d_store/features/personalization/screens/profile/profile.dart';
 import 'package:d_store/features/shop/screens/product_details/product_details.dart';
 import 'package:d_store/features/shop/screens/product_reviews/product_reviews.dart';
+import 'package:d_store/navigation_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:d_store/utils/theme/theme.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';

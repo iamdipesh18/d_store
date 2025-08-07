@@ -53,11 +53,18 @@ class TImage {
 
   /// -- Products
   static const String productImage1 = 'assets/images/products/Airforce1.png';
-  static const String productImage2 =
-      'assets/images/products/Airforce1.png';
+  static const String productImage2 = 'assets/images/products/Airforce1.png';
 
   /// -- User Image
   static const String user = 'assets/images/user/user.png';
 
   /// -- Nike AF1s
+  ///
+  /// --- Product Reviews
+  static const String userProfileImage1 =
+      'assets/images/reviews/review_profile_image1.png';
+  static const String userProfileImage2 =
+      'assets/images/reviews/review_profile_image2.png';
+  static const String userProfileImage3 =
+      'assets/images/reviews/review_profile_image3.png';
 }
