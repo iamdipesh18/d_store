@@ -24,20 +24,20 @@ class TBillingPaymentSection extends StatelessWidget {
         const SizedBox(height: TSizes.spaceBtwItems / 2),
         Row(
           children: [
+            // TRoundedContainer(
+            //   width: 60,
+            //   height: 35,
+            //   backgroundColor: isDark ? TColors.light : TColors.white,
+            //   padding: const EdgeInsets.all(TSizes.sm),
+            //   child: const Image(
+            //     image: AssetImage(TImage.paypal),
+            //     fit: BoxFit.contain,
+            //   ),
+            // ),
+            //  const SizedBox(width: TSizes.spaceBtwItems,),
+            // Text('Paypal', style: Theme.of(context).textTheme.bodyLarge),
+            // const SizedBox(width: TSizes.spaceBtwItems,),
             TRoundedContainer(
-              width: 60,
-              height: 35,
-              backgroundColor: isDark ? TColors.light : TColors.white,
-              padding: const EdgeInsets.all(TSizes.sm),
-              child: const Image(
-                image: AssetImage(TImage.paypal),
-                fit: BoxFit.contain,
-              ),
-            ),
-             const SizedBox(width: TSizes.spaceBtwItems,),
-            Text('Paypal', style: Theme.of(context).textTheme.bodyLarge),
-            const SizedBox(width: TSizes.spaceBtwItems,),
-                    TRoundedContainer(
               width: 60,
               height: 35,
               backgroundColor: isDark ? TColors.light : TColors.white,
@@ -47,7 +47,7 @@ class TBillingPaymentSection extends StatelessWidget {
                 fit: BoxFit.contain,
               ),
             ),
-            const SizedBox(width: TSizes.spaceBtwItems,),
+            const SizedBox(width: TSizes.spaceBtwItems),
             Text('Esewa', style: Theme.of(context).textTheme.bodyLarge),
           ],
         ),
