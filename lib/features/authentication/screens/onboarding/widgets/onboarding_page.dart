@@ -1,7 +1,7 @@
 import 'package:d_store/utils/constants/sizes.dart';
 import 'package:d_store/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-
+import 'package:d_store/features/authentication/controllers/onboarding/onboarding_controller.dart';
 class OnBoardingPage extends StatefulWidget {
   const OnBoardingPage({
     super.key,

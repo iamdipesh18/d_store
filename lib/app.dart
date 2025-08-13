@@ -1,18 +1,4 @@
-import 'package:d_store/features/authentication/screens/onboarding/onboarding.dart';
-import 'package:d_store/features/personalization/screens/address/add_new_address.dart';
-import 'package:d_store/features/personalization/screens/address/address.dart';
-import 'package:d_store/features/personalization/screens/profile/profile.dart';
-import 'package:d_store/features/shop/screens/all_products/all_product.dart';
-import 'package:d_store/features/shop/screens/brand/all_brands.dart';
-import 'package:d_store/features/shop/screens/cart/cart.dart';
-import 'package:d_store/features/shop/screens/checkout/checkout.dart';
-import 'package:d_store/features/shop/screens/home/home.dart';
-import 'package:d_store/features/shop/screens/order/order.dart';
-import 'package:d_store/features/shop/screens/product_details/product_details.dart';
-import 'package:d_store/features/shop/screens/product_reviews/product_reviews.dart';
-import 'package:d_store/features/shop/screens/store/store.dart';
-import 'package:d_store/features/shop/screens/sub_category/sub_categories.dart';
-import 'package:d_store/navigation_menu.dart';
+import 'package:d_store/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:d_store/utils/theme/theme.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -26,22 +12,12 @@ class App extends StatelessWidget {
     return GetMaterialApp(
       themeMode: ThemeMode.system, // Use system theme mode
       theme: TAppTheme.lightTheme, // for light theme
-      darkTheme: TAppTheme.darkTheme, // for dark theme/
-      home: const OnBoardingScreen(), // Initial screen
-      // home: const NavigationMenu(),
-      // home: const HomeScreen(),
-      // home: const StoreScreen(),
-      // home: const ProfileScreen(),
-      // home: const ProductDetailScreen(),
-      // home: const ProductReviewsScreen(),
-      // home: const UserAddressScreen(),
-      // home: const CartScreen(),
-      // home: const CheckoutScreen(),
-      //  home: const AddNewAddressScreen(),
-      // home: const OrderScreen(),
-      // home:  const SubCategoriesScreen(),
-      // home:  const AllProducts(),
-      // home:const AllBrandsScreen(),
+      darkTheme: TAppTheme.darkTheme, // for dark theme
+      /// Show Loader or Circular Progress Indicator meanwhile Authentication Repository is deciding to show relevant screen.
+      home: const Scaffold(
+        backgroundColor: TColors.primary,
+        body: Center(child: CircularProgressIndicator(color: Colors.white)),
+      ),
       debugShowCheckedModeBanner: false, // Hide debug banner
     );
   }

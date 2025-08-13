@@ -1,4 +1,4 @@
-import 'package:d_store/features/authentication/controllers.onboarding/onboarding_controller.dart';
+import 'package:d_store/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:d_store/features/authentication/screens/onboarding/widgets/onboarding_dot_navigation.dart';
 import 'package:d_store/features/authentication/screens/onboarding/widgets/onboarding_next_button.dart';
 import 'package:d_store/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
@@ -23,18 +23,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     super.initState();
     // Pre-cache all GIFs for smooth transitions
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      precacheImage(
-        const AssetImage(TImage.onBoarding1),
-        context,
-      );
-      precacheImage(
-        const AssetImage(TImage.onBoarding2),
-        context,
-      );
-      precacheImage(
-        const AssetImage(TImage.onBoarding3),
-        context,
-      );
+      precacheImage(const AssetImage(TImage.onBoarding1), context);
+      precacheImage(const AssetImage(TImage.onBoarding2), context);
+      precacheImage(const AssetImage(TImage.onBoarding3), context);
     });
   }
 
