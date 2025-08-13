@@ -5,12 +5,15 @@ import 'package:d_store/common/widgets/layouts/grid_layout.dart';
 import 'package:d_store/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:d_store/common/widgets/brands/brand_card.dart';
 import 'package:d_store/common/widgets/texts/section_heading.dart';
+import 'package:d_store/features/shop/screens/brand/all_brands.dart';
 import 'package:d_store/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:d_store/utils/constants/colors.dart';
 import 'package:d_store/utils/constants/sizes.dart';
 import 'package:d_store/utils/constants/text_strings.dart';
 import 'package:d_store/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class StoreScreen extends StatelessWidget {
   const StoreScreen({super.key});
@@ -64,6 +67,7 @@ class StoreScreen extends StatelessWidget {
                         title: 'Featured Brands',
                         onPressed: () {
                           debugPrint("Featured Brands Text Pressed");
+                          Get.to(() => const AllBrandsScreen());
                         },
                       ),
                       const SizedBox(height: TSizes.spaceBtwItems / 1.5),
@@ -82,13 +86,38 @@ class StoreScreen extends StatelessWidget {
                 ),
 
                 /// -- Tabs
-                bottom: const TTabBar(
+                bottom: TTabBar(
                   tabs: [
-                    Tab(child: Text("Sports")),
-                    Tab(child: Text("Furniture")),
-                    Tab(child: Text("Electronics")),
-                    Tab(child: Text("Clothes")),
-                    Tab(child: Text("Cosmetics")),
+                    Tab(
+                      child: Text(
+                        "Sports",
+                        style: TextStyle(color:dark? TColors.white:TColors.darkerGrey),
+                      ),
+                    ),
+                    Tab(
+                      child: Text(
+                        "Furniture",
+                        style: TextStyle(color:dark? TColors.white:TColors.darkerGrey),
+                      ),
+                    ),
+                    Tab(
+                      child: Text(
+                        "Electronics",
+                        style: TextStyle(color:dark? TColors.white:TColors.darkerGrey),
+                      ),
+                    ),
+                    Tab(
+                      child: Text(
+                        "Clothes",
+                        style: TextStyle(color:dark? TColors.white:TColors.darkerGrey),
+                      ),
+                    ),
+                    Tab(
+                      child: Text(
+                        "Cosmetics",
+                        style: TextStyle(color:dark? TColors.white:TColors.darkerGrey),
+                      ),
+                    ),
                   ],
                 ),
               ),

@@ -28,9 +28,9 @@ class App extends StatelessWidget {
       theme: TAppTheme.lightTheme, // for light theme
       darkTheme: TAppTheme.darkTheme, // for dark theme/
       // home: const OnBoardingScreen(), // Initial screen
-      home: const NavigationMenu(),
+      // home: const NavigationMenu(),
       // home: const HomeScreen(),
-      // home: const StoreScreen(),
+      home: const StoreScreen(),
       // home: const ProfileScreen(),
       // home: const ProductDetailScreen(),
       // home: const ProductReviewsScreen(),
