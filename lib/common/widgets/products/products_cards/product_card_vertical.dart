@@ -36,7 +36,6 @@ class TProductCardVertical extends StatelessWidget {
           color: dark ? TColors.darkerGrey : TColors.white,
         ),
         child: Column(
-          // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             /// -- Thumbnail Section with Image, Tag, Wishlist Button
             TRoundedContainer(
@@ -46,7 +45,7 @@ class TProductCardVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   /// -- Thumbnail Image
-                   TRoundedImage(
+                  TRoundedImage(
                     imageUrl: TImage.productImage2,
                     applyImageRadius: true,
                   ),

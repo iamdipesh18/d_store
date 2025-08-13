@@ -2,6 +2,7 @@ import 'package:d_store/features/authentication/screens/onboarding/onboarding.da
 import 'package:d_store/features/personalization/screens/address/add_new_address.dart';
 import 'package:d_store/features/personalization/screens/address/address.dart';
 import 'package:d_store/features/personalization/screens/profile/profile.dart';
+import 'package:d_store/features/shop/screens/all_products/all_product.dart';
 import 'package:d_store/features/shop/screens/cart/cart.dart';
 import 'package:d_store/features/shop/screens/checkout/checkout.dart';
 import 'package:d_store/features/shop/screens/order/order.dart';
@@ -36,7 +37,8 @@ class App extends StatelessWidget {
       // home: const CheckoutScreen(),
       //  home: const AddNewAddressScreen(),
       // home: const OrderScreen(),
-      home:  const SubCategoriesScreen(),
+      // home:  const SubCategoriesScreen(),
+      home:  const AllProducts(),
       debugShowCheckedModeBanner: false, // Hide debug banner
     );
   }
