@@ -6,10 +6,13 @@ import 'package:d_store/common/widgets/texts/section_heading.dart';
 import 'package:d_store/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:d_store/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:d_store/features/shop/screens/home/widgets/promo_slider.dart';
+import 'package:d_store/features/shop/screens/sub_category/sub_categories.dart';
 import 'package:d_store/utils/constants/image_strings.dart';
 import 'package:d_store/utils/constants/sizes.dart';
 import 'package:d_store/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -29,7 +32,10 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(height: TSizes.spaceBtwSections),
 
                   /// -- Search Bar
-                  TSearchContainer(text: TText.tSearchInStore,space:TSizes.defaultSpace ,),
+                  TSearchContainer(
+                    text: TText.tSearchInStore,
+                    space: TSizes.defaultSpace,
+                  ),
                   SizedBox(height: TSizes.spaceBtwSections),
 
                   /// -- Categories
@@ -77,6 +83,7 @@ class HomeScreen extends StatelessWidget {
                       debugPrint(
                         'View All Button Pressed in Popular Categories',
                       );
+                      Get.to(() => const SubCategoriesScreen());
                     },
                   ),
                   const SizedBox(height: TSizes.spaceBtwItems),

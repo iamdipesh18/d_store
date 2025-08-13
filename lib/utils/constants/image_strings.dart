@@ -53,6 +53,7 @@ class TImage {
   static const String sportIcon = 'assets/icons/categories/Sports.png';
   static const String clothIcon = 'assets/icons/categories/clothes.png';
   static const String shoeIcon = 'assets/icons/categories/Shoe.png';
+  static const String shoe = 'assets/icons/categories/shoeIcon.png';
   static const String cosmeticIcon = 'assets/icons/categories/Cosmetics.png';
   static const String animalIcon = 'assets/icons/categories/Animal.png';
   static const String toyIcon = 'assets/icons/categories/Toys.png';
@@ -60,6 +61,8 @@ class TImage {
   static const String jwelleryIcon = 'assets/icons/categories/Jwellery.png';
   static const String electronicsIcon =
       'assets/icons/categories/Electronics.png';
+        static const String test =
+      'assets/icons/categories/test.png';
 
   // Banners
   static const String promoBanner1 = 'assets/images/banners/PromoBanner1.jpg';

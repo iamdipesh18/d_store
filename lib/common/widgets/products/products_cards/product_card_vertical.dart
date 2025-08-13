@@ -46,6 +46,7 @@ class TProductCardVertical extends StatelessWidget {
                 children: [
                   /// -- Thumbnail Image
                   TRoundedImage(
+                    width: double.infinity,
                     imageUrl: TImage.productImage2,
                     applyImageRadius: true,
                   ),
