@@ -9,8 +9,19 @@ class TImage {
   // Social Logos
   static const String facebook = 'assets/logos/facebook_icon.png';
   static const String google = 'assets/logos/google_icon.png';
-  static const String apple = 'assets/logos/apple.png';
+  //static const String apple = 'assets/logos/apple.png';
+
+  // Brands Logos
   static const String nike = 'assets/logos/Nike.png';
+  static const String adidas = 'assets/logos/adidas.png';
+  static const String apple = 'assets/logos/apple.png';
+  static const String acer = 'assets/logos/acer.png';
+  static const String ikea = 'assets/logos/ikea.png';
+  static const String samsung = 'assets/logos/samsung.png';
+  static const String zara = 'assets/logos/zara.png';
+  static const String jordan = 'assets/logos/jordan.png';
+  static const String kenwood = 'assets/logos/kenwood.png';
+  static const String puma = 'assets/logos/puma.png';
 
   // Payment Logos
   static const String esewa = 'assets/icons/payment_methods/esewa_icon.png';
