@@ -12,7 +12,7 @@ class TImage {
   //static const String apple = 'assets/logos/apple.png';
 
   // Brands Logos
-  static const String nike = 'assets/logos/Nike.png';
+  static const String nike = 'assets/logos/nike.png';
   static const String adidas = 'assets/logos/adidas.png';
   static const String apple = 'assets/logos/apple.png';
   static const String acer = 'assets/logos/acer.png';

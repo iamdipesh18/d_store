@@ -6,6 +6,7 @@ import 'package:d_store/features/shop/screens/all_products/all_product.dart';
 import 'package:d_store/features/shop/screens/brand/all_brands.dart';
 import 'package:d_store/features/shop/screens/cart/cart.dart';
 import 'package:d_store/features/shop/screens/checkout/checkout.dart';
+import 'package:d_store/features/shop/screens/home/home.dart';
 import 'package:d_store/features/shop/screens/order/order.dart';
 import 'package:d_store/features/shop/screens/product_details/product_details.dart';
 import 'package:d_store/features/shop/screens/product_reviews/product_reviews.dart';
@@ -26,8 +27,8 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system, // Use system theme mode
       theme: TAppTheme.lightTheme, // for light theme
       darkTheme: TAppTheme.darkTheme, // for dark theme/
-      home: const OnBoardingScreen(), // Initial screen
-      // home: const NavigationMenu(),
+      // home: const OnBoardingScreen(), // Initial screen
+      home: const NavigationMenu(),
       // home: const HomeScreen(),
       // home: const StoreScreen(),
       // home: const ProfileScreen(),
