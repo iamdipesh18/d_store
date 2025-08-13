@@ -1,3 +1,4 @@
+import 'package:d_store/common/widgets/appbar/appbar.dart';
 import 'package:d_store/features/authentication/screens/password_configuration/reset_password.dart';
 import 'package:d_store/utils/constants/sizes.dart';
 import 'package:d_store/utils/constants/text_strings.dart';
@@ -11,7 +12,7 @@ class ForgetPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: TAppbar(showBackArrow: true),
       body: Padding(
         padding: EdgeInsetsGeometry.all(TSizes.defaultSpace),
         child: Column(
@@ -40,7 +41,7 @@ class ForgetPassword extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: ()=>Get.off(()=>const ResetPassword()),
+                onPressed: () => Get.off(() => const ResetPassword()),
                 child: Text(TText.submit),
               ),
             ),
