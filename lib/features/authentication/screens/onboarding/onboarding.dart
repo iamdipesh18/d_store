@@ -8,45 +8,67 @@ import 'package:d_store/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
-class OnBoardingScreen extends StatelessWidget {
+class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
 
   @override
+  State<OnBoardingScreen> createState() => _OnBoardingScreenState();
+}
+
+class _OnBoardingScreenState extends State<OnBoardingScreen> {
+  final controller = Get.put(OnBoardingController());
+
+  @override
+  void initState() {
+    super.initState();
+    // Pre-cache all GIFs for smooth transitions
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      precacheImage(
+        const AssetImage(TImage.onBoarding1),
+        context,
+      );
+      precacheImage(
+        const AssetImage(TImage.onBoarding2),
+        context,
+      );
+      precacheImage(
+        const AssetImage(TImage.onBoarding3),
+        context,
+      );
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final controller = Get.put(OnBoardingController());
-    
     return Scaffold(
       body: Stack(
-        // Horizontal Scrollable PageView with Dots Indicator
         children: [
-          // PageView for Onboarding Screens
           PageView(
             controller: controller.pageController,
             onPageChanged: controller.updatePageIndicator,
-            children: const [
+            children: [
               OnBoardingPage(
-                image: TImage.onBoarding1,
+                // gif: 'assets/images/animations/onboarding1.gif',
+                gif: TImage.onBoarding1,
                 title: TText.onBoardingTitle1,
                 subtitle: TText.onBoardingSubtitle1,
               ),
               OnBoardingPage(
-                image: TImage.onBoarding2,
+                // gif: 'assets/animations/onboarding2.gif',
+                gif: TImage.onBoarding2,
                 title: TText.onBoardingTitle2,
                 subtitle: TText.onBoardingSubtitle2,
               ),
               OnBoardingPage(
-                image: TImage.onBoarding3,
+                // gif: 'assets/animations/onboarding3.gif',
+                gif: TImage.onBoarding3,
                 title: TText.onBoardingTitle3,
                 subtitle: TText.onBoardingSubtitle3,
               ),
             ],
           ),
-          // Skip Button
           const OnBoardingSkip(),
-          // Dot Navigation Smooth Page Indicator
           const OnBoardingDotNavigation(),
-          // Circular Button
           const OnBoardingNextButton(),
         ],
       ),
