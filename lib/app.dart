@@ -3,6 +3,7 @@ import 'package:d_store/features/personalization/screens/address/add_new_address
 import 'package:d_store/features/personalization/screens/address/address.dart';
 import 'package:d_store/features/personalization/screens/profile/profile.dart';
 import 'package:d_store/features/shop/screens/all_products/all_product.dart';
+import 'package:d_store/features/shop/screens/brand/all_brands.dart';
 import 'package:d_store/features/shop/screens/cart/cart.dart';
 import 'package:d_store/features/shop/screens/checkout/checkout.dart';
 import 'package:d_store/features/shop/screens/order/order.dart';
@@ -25,7 +26,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system, // Use system theme mode
       theme: TAppTheme.lightTheme, // for light theme
       darkTheme: TAppTheme.darkTheme, // for dark theme/
-      // home: const OnBoardingScreen(), // Initial screen
+      home: const OnBoardingScreen(), // Initial screen
       // home: const NavigationMenu(),
       // home: const HomeScreen(),
       // home: const StoreScreen(),
@@ -38,7 +39,8 @@ class App extends StatelessWidget {
       //  home: const AddNewAddressScreen(),
       // home: const OrderScreen(),
       // home:  const SubCategoriesScreen(),
-      home:  const AllProducts(),
+      // home:  const AllProducts(),
+      // home:const AllBrandsScreen(),
       debugShowCheckedModeBanner: false, // Hide debug banner
     );
   }

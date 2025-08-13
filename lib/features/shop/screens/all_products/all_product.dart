@@ -1,6 +1,7 @@
 import 'package:d_store/common/widgets/appbar/appbar.dart';
 import 'package:d_store/common/widgets/layouts/grid_layout.dart';
 import 'package:d_store/common/widgets/products/products_cards/product_card_vertical.dart';
+import 'package:d_store/common/widgets/products/sortable/sortable_products.dart';
 import 'package:d_store/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
@@ -15,35 +16,7 @@ class AllProducts extends StatelessWidget {
       appBar: TAppbar(title: Text('Popular Products'), showBackArrow: true),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(TSizes.defaultSpace),
-        child: Column(
-          children: [
-            /// -- DropDown
-            DropdownButtonFormField(
-              decoration: const InputDecoration(prefixIcon: Icon(Iconsax.sort)),
-              onChanged: (value) {},
-              items:
-                  [
-                        'Name',
-                        'Higher Price',
-                        'Lower Price',
-                        'Sale',
-                        'Newest',
-                        'Popularity',
-                      ]
-                      .map(
-                        (option) => DropdownMenuItem(
-                          value: option,
-                          child: Text(option),
-                        ),
-                      )
-                      .toList(),
-            ),
-            const SizedBox(height: TSizes.spaceBtwSections,),
-            /// -- Products
-            TGridLayout(itemCount: 14, itembuilder: (_,index)=>const TProductCardVertical(),),
-
-          ],
-        ),
+        child: TSortableProducts(),
       ),
     );
   }
