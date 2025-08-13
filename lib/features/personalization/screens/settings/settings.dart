@@ -5,6 +5,8 @@ import 'package:d_store/common/widgets/list_tile/user_profile_tile.dart';
 import 'package:d_store/common/widgets/texts/section_heading.dart';
 import 'package:d_store/features/personalization/screens/address/address.dart';
 import 'package:d_store/features/personalization/screens/profile/profile.dart';
+import 'package:d_store/features/shop/screens/cart/cart.dart';
+import 'package:d_store/features/shop/screens/order/order.dart';
 import 'package:d_store/utils/constants/colors.dart';
 import 'package:d_store/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +37,9 @@ class SettingsScreen extends StatelessWidget {
                   ),
 
                   /// -- User Profile Card
-                   TUserProfileTile( onPressed:()=>Get.to(()=> const ProfileScreen()) ,),
+                  TUserProfileTile(
+                    onPressed: () => Get.to(() => const ProfileScreen()),
+                  ),
                   const SizedBox(height: TSizes.spaceBtwSections),
                 ],
               ),
@@ -58,20 +62,20 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.safe_home,
                     title: "My Addresses",
                     subTitle: "Set shopping delivery address",
-                    onTap: ()=> Get.to(()=> const UserAddressScreen()),
+                    onTap: () => Get.to(() => const UserAddressScreen()),
                   ),
 
                   TSettingsMenuTile(
                     icon: Iconsax.shopping_cart,
                     title: "My Cart",
                     subTitle: "Add, remove products and move to checkout",
-                    onTap: () {},
+                    onTap: () => Get.to(() => const CartScreen()),
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.bag_tick,
                     title: "My Orders",
                     subTitle: "In progrress and completed orders",
-                    onTap: () {},
+                    onTap: () => Get.to(() => const OrderScreen()),
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.bank,

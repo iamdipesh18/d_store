@@ -4,9 +4,11 @@ import 'package:d_store/features/personalization/screens/address/address.dart';
 import 'package:d_store/features/personalization/screens/profile/profile.dart';
 import 'package:d_store/features/shop/screens/cart/cart.dart';
 import 'package:d_store/features/shop/screens/checkout/checkout.dart';
+import 'package:d_store/features/shop/screens/order/order.dart';
 import 'package:d_store/features/shop/screens/product_details/product_details.dart';
 import 'package:d_store/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:d_store/features/shop/screens/store/store.dart';
+import 'package:d_store/features/shop/screens/sub_category/sub_categories.dart';
 import 'package:d_store/navigation_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:d_store/utils/theme/theme.dart';
@@ -31,8 +33,10 @@ class App extends StatelessWidget {
       // home: const ProductReviewsScreen(),
       // home: const UserAddressScreen(),
       // home: const CartScreen(),
-      home: const CheckoutScreen(),
+      // home: const CheckoutScreen(),
       //  home: const AddNewAddressScreen(),
+      // home: const OrderScreen(),
+      home:  const SubCategoriesScreen(),
       debugShowCheckedModeBanner: false, // Hide debug banner
     );
   }
