@@ -1,11 +1,20 @@
-class TValidator{
+class TValidator {
+  // Empty Text Validation
+  static String? validateEmptyText(String? fieldName, String? value) {
+    if (value == null || value.isEmpty) {
+      return '$fieldName is required';
+    }
+  }
+
   static String? validateEmail(String? value) {
     if (value == null || value.isEmpty) {
       return 'Email cannot be empty';
     }
     // Regular expression for validating email format
     // This regex checks for a basic email format: local-part@domain
-    final emailRegex = RegExp(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
+    final emailRegex = RegExp(
+      r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$',
+    );
 
     // Check if the value matches the email regex
     // If it doesn't match, return an error message
@@ -14,7 +23,7 @@ class TValidator{
     }
     return null;
   }
-  
+
   // Method to validate password
   static String? validatePassword(String? value) {
     if (value == null || value.isEmpty) {
@@ -59,5 +68,4 @@ class TValidator{
     }
     return null;
   }
-  
 }
