@@ -1,21 +1,15 @@
-import 'package:d_store/common/widgets/appbar/appbar.dart';
-import 'package:d_store/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
-import 'package:d_store/common/widgets/icons/t_circular_icon.dart';
-import 'package:d_store/common/widgets/images/t_rounded_image.dart';
 import 'package:d_store/common/widgets/texts/section_heading.dart';
+import 'package:d_store/features/shop/screens/checkout/checkout.dart';
 import 'package:d_store/features/shop/screens/product_details/widgets/bottom_add_to_cart_widget.dart';
 import 'package:d_store/features/shop/screens/product_details/widgets/product_attributes.dart';
 import 'package:d_store/features/shop/screens/product_details/widgets/product_details_image_slider.dart';
 import 'package:d_store/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:d_store/features/shop/screens/product_details/widgets/ratings_and_share_widget.dart';
 import 'package:d_store/features/shop/screens/product_reviews/product_reviews.dart';
-import 'package:d_store/utils/constants/colors.dart';
-import 'package:d_store/utils/constants/image_strings.dart';
 import 'package:d_store/utils/constants/sizes.dart';
 import 'package:d_store/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
 
@@ -59,6 +53,7 @@ class ProductDetailScreen extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: () {
                         debugPrint("Check Out Button Pressed");
+                        Get.to(() => const CheckoutScreen());
                       },
                       child: Text('Checkout'),
                     ),
