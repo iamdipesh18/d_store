@@ -4,45 +4,58 @@ import 'package:d_store/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// A utility class to handle fullscreen loading dialogs in the app.
+///
+/// Features:
+/// - Blocks user interaction while loading.
+/// - Safe to open/close without risking crashes.
+/// - Fully theme-aware (adapts to Dark/Light mode).
 class TFullScreenLoader {
-  // Open a full screen loading dialog with a given text and animation
-  // This method doesnot return anything
-
-  // Parameters
-  // text : The text to be displayed in the loading dialog
-  // animation : The lottie animation to be shown
-
+  /// Opens a fullscreen blocking loading dialog.
+  ///
+  /// Parameters:
+  /// - [text] → Message shown under the loader animation.
+  /// - [animation] → Path to the Lottie animation asset.
+  ///
+  /// Notes:
+  /// - Cannot be dismissed by tapping outside or using the back button.
+  /// - Should always be followed by a call to [stopLoading] once the task is complete.
   static void openLoadingDialog(String text, String animation) {
+    final overlayContext = Get.overlayContext;
+    if (overlayContext == null) {
+      return; // Safety: If no overlay, skip showing loader
+    }
     showDialog(
       context: Get.overlayContext!,
       barrierDismissible: false,
       builder: (_) => PopScope(
         canPop: false,
         child: Container(
-          color: THelperFunctions.isDarkMode(Get.context!)
+          color: THelperFunctions.isDarkMode(Get.context ?? overlayContext)
               ? TColors.dark
               : TColors.white,
           width: double.infinity,
           height: double.infinity,
-          child: Column(
-            children: [
-              const SizedBox(height: 250),
-              TAnimationLoaderWidget(
-                text: text,
-                animation: animation,
-                showAction: false,
-              ),
-            ],
+          child: Center(
+            child: TAnimationLoaderWidget(text: text, animation: animation),
           ),
         ),
       ),
     );
   }
 
-  // Stop the currently opened loading dialog
-  // THis method doesnot return anything
+  /// Closes the currently open loading dialog.
+  ///
+  /// Safe to call even if no loader is active.
+  /// Example usage:
+  /// ```dart
+  /// TFullScreenLoader.stopLoading();
+  /// ```
+  static void stopLoading() {
+    final overlayContext = Get.overlayContext;
 
-  static stopLoading() {
-    Navigator.of(Get.overlayContext!).pop(); // Close the dialog using navigator
+    if (overlayContext != null && Navigator.of(overlayContext).canPop()) {
+      Navigator.of(overlayContext).pop(); // Close the top-most dialog
+    }
   }
 }

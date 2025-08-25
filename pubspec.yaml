@@ -15,7 +15,7 @@ dependencies:
 # UTILITY PACKAGES
   logger: ^2.0.1
   url_launcher: ^6.1.12
-  intl: ^0.18.1
+  intl: ^0.20.2
   http: ^1.1.0
   flutter_native_splash: ^2.4.6
   smooth_page_indicator: ^1.2.1
@@ -38,11 +38,15 @@ dependencies:
 
 # FIREBASE
   firebase_core: ^4.0.0
+  firebase_auth: ^6.0.1
+  cloud_firestore: ^6.0.0
 
 
 #---------------- PACKAGES END ----------------#
 
-  flutter_svg: ^1.1.6
+  flutter_svg: ^2.0.13
+
+
   
   
 
@@ -50,7 +54,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
 
 flutter:
   uses-material-design: true
@@ -71,6 +75,7 @@ flutter:
     - assets/icons/categories/
     - assets/icons/payment_methods/
     - assets/fonts/
+    - assets/animation/
 
 #---------------- LOCAL FONTS ----------------#
   fonts:

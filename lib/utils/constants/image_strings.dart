@@ -87,4 +87,8 @@ class TImage {
       'assets/images/reviews/review_profile_image2.png';
   static const String userProfileImage3 =
       'assets/images/reviews/review_profile_image3.png';
+
+  /// --- Lottie Animations
+  static const String loading = 'assets/animation/loader.json';
+  static const String success = 'assets/animation/success.json';
 }

@@ -1,52 +1,63 @@
 import 'dart:async';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:d_store/utils/popups/loaders.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart'; // needed for PlatformException
+import 'package:flutter/services.dart'; // For PlatformException
 import 'package:get/get.dart';
 
-// manages the network connectivity status and provides methods to chek and handle connectivity changes
+/// Manages the network connectivity status and provides methods
+/// to check and handle connectivity changes across the app.
 class NetworkManager extends GetxController {
+  /// Singleton instance (accessible via `NetworkManager.instance`)
   static NetworkManager get instance => Get.find();
 
   final Connectivity _connectivity = Connectivity();
-  late StreamSubscription<List<ConnectivityResult>> _connectivitySubscription;
 
+  /// Subscription to listen for connectivity changes
+  late final StreamSubscription<List<ConnectivityResult>> _connectivitySubscription;
+
+  /// Holds the current connection status (reactive)
   final Rx<ConnectivityResult> _connectionStatus = ConnectivityResult.none.obs;
 
-  // Expose the current connection status publicly
+  /// Public getter for the current connection status
   ConnectivityResult get connectionStatus => _connectionStatus.value;
 
-  // Initialize the network manager and set up a stream to continually check the connection status
+  /// Initialize the manager and start listening for connectivity changes.
   @override
   void onInit() {
     super.onInit();
-    _connectivitySubscription = _connectivity.onConnectivityChanged.listen(
-      _updateConnectionStatus as void Function(List<ConnectivityResult> event)?,
-    );
+
+    _connectivitySubscription =
+        _connectivity.onConnectivityChanged.listen((List<ConnectivityResult> results) {
+      // API returns a list of active connections (WiFi + Mobile, etc.)
+      final result = results.isNotEmpty ? results.first : ConnectivityResult.none;
+      _updateConnectionStatus(result);
+    });
   }
 
-  // Update the connectivity result whenever the connection changes
+  /// Update the connectivity state and handle UI feedback if needed.
   Future<void> _updateConnectionStatus(ConnectivityResult result) async {
     _connectionStatus.value = result;
-    if (_connectionStatus.value == ConnectivityResult.none) {
+
+    if (result == ConnectivityResult.none) {
       // Show a warning snackbar if there is no internet connectivity
       TLoaders.warningSnackBar(title: 'No Internet Connectivity');
     }
   }
 
-  // Check the internet connection status
-  // return true if connected and false if not
+  /// Manually check internet connection once.
+  /// Returns `true` if connected, `false` otherwise.
   Future<bool> isConnected() async {
     try {
-      final result = await _connectivity.checkConnectivity();
+      final results = await _connectivity.checkConnectivity();
+      // In v6, this also returns a list of ConnectivityResult
+      final result = results.isNotEmpty ? results.first : ConnectivityResult.none;
       return result != ConnectivityResult.none;
     } on PlatformException catch (_) {
       return false;
     }
   }
 
-  // Cancel the subscription when the controller is disposed to prevent memory leaks
+  /// Cancel subscription when controller is disposed (prevents memory leaks).
   @override
   void onClose() {
     _connectivitySubscription.cancel();

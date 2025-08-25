@@ -8,23 +8,22 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 /// Main entry point of the application.
-void main() async {
-  /// -- Add Widgets Binding
+Future <void> main() async {
+  /// --  Widgets Binding
   final WidgetsBinding widgetsBinding =
       WidgetsFlutterBinding.ensureInitialized();
 
-  /// -- Init Local Storage
+  /// -- GetX Local Storage
   await GetStorage.init();
 
   /// -- Await Native Splash Screen
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
-  // Todo: Initialize Firebase
+  // Initialize Firebase & Authentication Repository
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   ).then((FirebaseApp value) => Get.put(AuthenticationRepository()));
-  
-  // Todo: Initialize Authentication
+
 
   // Load all the Material Designs / themes / Localizations / Bindings
   runApp(const App());
