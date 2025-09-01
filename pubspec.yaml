@@ -45,6 +45,7 @@ dependencies:
 #---------------- PACKAGES END ----------------#
 
   flutter_svg: ^2.0.13
+  google_sign_in: ^7.1.1
 
 
   
