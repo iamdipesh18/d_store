@@ -91,4 +91,5 @@ class TImage {
   /// --- Lottie Animations
   static const String loading = 'assets/animation/loader.json';
   static const String success = 'assets/animation/success.json';
+  static const String docerAnimation = 'assets/animation/login.json';
 }

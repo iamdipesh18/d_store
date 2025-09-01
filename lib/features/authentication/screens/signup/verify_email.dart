@@ -16,6 +16,7 @@ class VerifyEmailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(VerifyEmailController());
+    
     return Scaffold(
       /// The close icon in the app bar is used to log out the user and redirect them to the login screen
       /// This approach is taken to handle scenatios where the uset enters the registration process,

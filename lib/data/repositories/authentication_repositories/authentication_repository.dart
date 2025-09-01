@@ -65,27 +65,41 @@ class AuthenticationRepository extends GetxController {
 
   /* ---------------------------------- Email & Password Sign in ------------------------------------------------- */
   /// [Email Authentication] - SignIn
-  Future<UserCredential> loginWithEmailAndPassword(
-    String email,
-    String password,
-  ) async {
-    try {
-      return await _auth.signInWithEmailAndPassword(
-        email: email,
-        password: password,
-      );
-    } on FirebaseAuthException catch (e) {
-      throw TFirebaseAuthExceptions(e.code).message;
-    } on FirebaseException catch (e) {
-      throw TFirebaseException(e.code).message;
-    } on FormatException catch (_) {
-      throw const TFormatException();
-    } on PlatformException catch (e) {
-      throw TPlatformException(e.code).message;
-    } catch (e) {
-      throw "Something went wrong , Please try again";
-    }
+  // Future<UserCredential> loginWithEmailAndPassword(
+  //   String email,
+  //   String password,
+  // ) async {
+  //   try {
+  //     return await _auth.signInWithEmailAndPassword(
+  //       email: email,
+  //       password: password,
+  //     );
+  //   } on FirebaseAuthException catch (e) {
+  //     throw TFirebaseAuthExceptions(e.code).message;
+  //   } on FirebaseException catch (e) {
+  //     throw TFirebaseException(e.code).message;
+  //   } on FormatException catch (_) {
+  //     throw const TFormatException();
+  //   } on PlatformException catch (e) {
+  //     throw TPlatformException(e.code).message;
+  //   } catch (e) {
+  //     throw "Something went wrong , Please try again";
+  //   }
+  // }
+  Future<User?> loginWithEmailAndPassword(String email, String password) async {
+  try {
+    final credential = await _auth.signInWithEmailAndPassword(
+      email: email,
+      password: password,
+    );
+    print("Credential: ${credential.user}");
+    return credential.user;
+  } on FirebaseAuthException catch (e) {
+    print("FirebaseAuthException: $e");
+    rethrow;
   }
+}
+
   /// [Email Authentication] - Register
   Future<UserCredential> registerWithEmailAndPassword(
     String email,
@@ -126,7 +140,7 @@ class AuthenticationRepository extends GetxController {
     }
   }
 
-  /// [ReAuthenticate] - ReAuthenticate User
+  /// ReAuthenticate - ReAuthenticate User
   /// [Emaill Authentication] - Forget Password
   /* ------------------------------- End Federated Identity & Social Sign in -------------------------------------- */
   /// [Logout User] - Valid for any authentication

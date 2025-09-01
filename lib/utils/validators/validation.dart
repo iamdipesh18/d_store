@@ -76,7 +76,7 @@ class TValidator {
   /// Rules:
   /// - At least 8 characters
   /// - Must contain uppercase, lowercase, digit, and special character
-  static String? validatePassword(String? value) {
+  static String? validatePassword(String fieldName,String? value) {
     final trimmedValue = value?.trim() ?? '';
     if (trimmedValue.isEmpty) {
       return 'Password cannot be empty';
