@@ -4,7 +4,7 @@ class TFormatException implements Exception {
   final String message;
 
   // Default Constructor with a generic error message
-  const TFormatException([this.message = "The data format is invalid."]);
+  const TFormatException([this.message = " An unexpected format error occurred. Please check your input."]);
 
   // Create a Format Exception from a specific error message
   factory TFormatException.fromMessage(String message) {
@@ -125,9 +125,7 @@ class TFormatException implements Exception {
 
       // 🔹 Default fallback
       default:
-        return const TFormatException(
-          "An unexpected format error occurred. Please check your input.",
-        );
+        return const TFormatException();
     }
   }
 }

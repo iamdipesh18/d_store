@@ -3,7 +3,6 @@ import 'package:d_store/features/shop/screens/order/widgets/order_list.dart';
 import 'package:d_store/utils/constants/sizes.dart';
 import 'package:d_store/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
 
 class OrderScreen extends StatelessWidget {
   const OrderScreen({super.key});

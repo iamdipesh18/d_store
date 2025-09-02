@@ -1,7 +1,9 @@
 import 'package:d_store/common/widgets/appbar/appbar.dart';
+import 'package:d_store/features/authentication/controllers/forget_password/forget_password_controller.dart';
 import 'package:d_store/features/authentication/screens/password_configuration/reset_password.dart';
 import 'package:d_store/utils/constants/sizes.dart';
 import 'package:d_store/utils/constants/text_strings.dart';
+import 'package:d_store/utils/validators/validation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -11,6 +13,7 @@ class ForgetPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(ForgetPasswordController());
     return Scaffold(
       appBar: TAppbar(showBackArrow: true),
       body: Padding(
@@ -30,10 +33,15 @@ class ForgetPassword extends StatelessWidget {
             ),
             const SizedBox(height: TSizes.spaceBtwItems * 2),
             // Text Fields
-            TextFormField(
-              decoration: const InputDecoration(
-                prefixIcon: Icon(Iconsax.direct_right),
-                labelText: TText.email,
+            Form(
+              key: controller.forgetPasswordFormKey,
+              child: TextFormField(
+                controller: controller.email,
+                validator: TValidator.validateEmail,
+                decoration: const InputDecoration(
+                  prefixIcon: Icon(Iconsax.direct_right),
+                  labelText: TText.email,
+                ),
               ),
             ),
             const SizedBox(height: TSizes.spaceBtwSections),
@@ -41,7 +49,9 @@ class ForgetPassword extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () => Get.off(() => const ResetPassword()),
+                // onPressed: () => Get.off(() => controller.sendPasswordResetEmail()),
+                onPressed: () => controller.sendPasswordResetEmail(),
+
                 child: Text(TText.submit),
               ),
             ),

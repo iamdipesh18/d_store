@@ -1,4 +1,3 @@
-import 'package:flutter/services.dart';
 
 /// Handles errors from platform channels (iOS/Android native side).
 class TPlatformException implements Exception {

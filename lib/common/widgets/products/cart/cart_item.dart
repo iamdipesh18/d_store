@@ -2,7 +2,6 @@ import 'package:d_store/common/widgets/images/t_rounded_image.dart';
 import 'package:d_store/common/widgets/texts/product_title_text.dart';
 import 'package:d_store/common/widgets/texts/t_brand_title_text_with_verified_icon.dart';
 import 'package:d_store/utils/constants/colors.dart';
-import 'package:d_store/utils/constants/image_strings.dart';
 import 'package:d_store/utils/constants/sizes.dart';
 import 'package:d_store/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';

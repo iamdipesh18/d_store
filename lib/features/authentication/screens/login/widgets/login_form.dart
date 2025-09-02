@@ -1,7 +1,6 @@
 import 'package:d_store/features/authentication/controllers/login/login_controller.dart';
 import 'package:d_store/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:d_store/features/authentication/screens/signup/signup.dart';
-import 'package:d_store/navigation_menu.dart';
 import 'package:d_store/utils/constants/sizes.dart';
 import 'package:d_store/utils/constants/text_strings.dart';
 import 'package:d_store/utils/validators/validation.dart';

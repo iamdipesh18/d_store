@@ -1,8 +1,6 @@
 import 'dart:async';
 import 'package:d_store/common/widgets/success_screen/success_screen.dart';
 import 'package:d_store/data/repositories/authentication_repositories/authentication_repository.dart';
-import 'package:d_store/data/user/user_model.dart';
-import 'package:d_store/data/user/user_repository.dart';
 import 'package:d_store/utils/constants/image_strings.dart';
 import 'package:d_store/utils/constants/text_strings.dart';
 import 'package:d_store/utils/popups/loaders.dart';

@@ -29,7 +29,7 @@ class SignupController extends GetxController {
       GlobalKey<FormState>(); // Form Key For Form Validation
 
   /// -- Signup
-  signup() async {
+  Future<void> signup() async {
     try {
       /// -- Start Loading
       TFullScreenLoader.openLoadingDialog(

@@ -13,9 +13,9 @@ class TChipTheme {
 
   static ChipThemeData darkChipTheme =const ChipThemeData(
     disabledColor: TColors.darkerGrey, // Color for disabled chips
-    labelStyle: const TextStyle(color: TColors.white), // Text style for chip labels
+    labelStyle: TextStyle(color: TColors.white), // Text style for chip labels
     selectedColor: TColors.primary, // Color for selected chips
-    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 12), // Padding around the chip content
+    padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 12), // Padding around the chip content
     checkmarkColor: TColors.white, // Color for the checkmark in selected chips
   );
 }

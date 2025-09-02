@@ -1,14 +1,9 @@
 import 'package:d_store/common/widgets/appbar/appbar.dart';
 import 'package:d_store/common/widgets/products/ratings/rating_indicator.dart';
 import 'package:d_store/features/shop/screens/product_reviews/widgets/overall_product_rating.dart';
-import 'package:d_store/features/shop/screens/product_reviews/widgets/rating_progress_indicator.dart';
 import 'package:d_store/features/shop/screens/product_reviews/widgets/user_review_card.dart';
-import 'package:d_store/utils/constants/colors.dart';
 import 'package:d_store/utils/constants/sizes.dart';
-import 'package:d_store/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:iconsax/iconsax.dart';
 
 class ProductReviewsScreen extends StatelessWidget {
   const ProductReviewsScreen({super.key});

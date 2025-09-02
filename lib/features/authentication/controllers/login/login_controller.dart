@@ -1,5 +1,6 @@
 import 'package:d_store/data/repositories/authentication_repositories/authentication_repository.dart';
 import 'package:d_store/features/authentication/controllers/signup/network_manager.dart';
+import 'package:d_store/features/personalization/controllers/user_controller.dart';
 import 'package:d_store/utils/constants/image_strings.dart';
 import 'package:d_store/utils/popups/full_screen_loader.dart';
 import 'package:d_store/utils/popups/loaders.dart';
@@ -16,6 +17,7 @@ class LoginController extends GetxController {
   final password = TextEditingController();
 
   GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
+  final userController = Get.put(UserController());
 
   @override
   void onInit() {
@@ -28,6 +30,7 @@ class LoginController extends GetxController {
 
   /// -- Email & Password Login
   Future<void> emailAndPasswordSignin() async {
+  
     try {
       // Start Loading
       TFullScreenLoader.openLoadingDialog(
@@ -71,4 +74,40 @@ class LoginController extends GetxController {
       TLoaders.errorSnackBar(title: "Oh Snap!", message: e.toString());
     }
   }
+
+  // Google Sign-In
+  // Future<void> googleSignIn() async {
+  //   try {
+  //     // Start Loading
+  //     TFullScreenLoader.openLoadingDialog(
+  //       "Logging you in ...",
+  //       TImage.docerAnimation,
+  //     );
+
+  //     /// -- Check Internet Connectivity
+  //     final isConnected = await NetworkManager.instance.isConnected();
+  //     if (!isConnected) {
+  //       // Remove Loader
+  //       TFullScreenLoader.stopLoading();
+  //       return;
+  //     }
+
+  //     /// -- Google Authentication
+  //     final userCredentials =
+  //         await AuthenticationRepository.instance.signInWithGoogle();
+
+  //     /// -- Save User Record to Firestore
+  //     await userController.saveUserRecord(userCredentials);
+
+  //     /// -- Remove Loader
+  //     TFullScreenLoader.stopLoading();
+
+  //     /// -- Redirect
+  //     AuthenticationRepository.instance.screenRedirect();
+  //   } catch (e) {
+  //     /// -- Remove Loader
+  //     TFullScreenLoader.stopLoading();
+  //     TLoaders.errorSnackBar(title: "Oh Snap!", message: e.toString());
+  //   }
+  // }
 }

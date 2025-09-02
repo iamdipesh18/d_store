@@ -1,5 +1,4 @@
 import 'package:d_store/common/widgets/appbar/appbar.dart';
-import 'package:d_store/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:d_store/features/shop/screens/home/widgets/TCartCounterIconForHomeScreen.dart';
 import 'package:d_store/utils/constants/colors.dart';
 import 'package:d_store/utils/constants/text_strings.dart';
